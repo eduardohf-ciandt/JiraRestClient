@@ -15,7 +15,12 @@ namespace TechTalk.JiraRestClient
             issuelinks = new List<IssueLink>();
             attachment = new List<Attachment>();
             watchers = new List<JiraUser>();
+
+            progress = new Progress();
+            customfield_10007 = new List<string>();
         }
+
+        public IssueType issuetype { get; set; }
 
         public String summary { get; set; }
         public String description { get; set; }
@@ -30,5 +35,12 @@ namespace TechTalk.JiraRestClient
         public List<Comment> comments { get; set; }
         public List<IssueLink> issuelinks { get; set; }
         public List<Attachment> attachment { get; set; }
+
+        public DateTime? updated { get; set; }
+        public Progress progress { get; set; }
+        public DateTime? duedate { get; set; }
+
+        public Release customfield_10600 { get; set; }
+        public List<string> customfield_10007 { get; set; } 
     }
 }
